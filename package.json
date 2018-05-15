@@ -12,7 +12,8 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages"
+    "deploy": "gh-pages -b master -d build",
+    "predeploy": "npm run build"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
