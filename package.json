@@ -1,7 +1,7 @@
 {
-  "name": "testrewired",
+  "name": "akrigline-microsite",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://akrigline.github.io",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -11,10 +11,12 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
+    "gh-pages": "^1.1.0",
     "node-sass": "^4.7.2",
     "react-app-rewired": "^1.4.1",
     "sass-loader": "^6.0.6",
