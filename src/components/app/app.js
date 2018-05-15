@@ -7,12 +7,14 @@ class App extends Component {
     return (
       <div className={styles.app}>
         <header className={styles.appHeader}>
-          <Logo className={styles.appLogo} />
-          <h1 className={styles.appTitle}>Welcome to React</h1>
         </header>
-        <p className={styles.appIntro}>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main>
+          <Logo className={styles.appLogo} />
+          <h1 className={styles.appTitle}>Greetings</h1>
+          <p>
+            I am Andrew Krigline.
+          </p>
+        </main>
       </div>
     )
   }
