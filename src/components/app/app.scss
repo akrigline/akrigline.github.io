@@ -1,26 +1,81 @@
 .app {
 }
 
+.fixed {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
 .appLogo {
-  height: 80px;
+  height: 4rem;
   fill: $text--light;
 }
 
 .appHeader {
-  height: 150px;
-  padding: 20px;
   color: $text--light;
+  margin: auto;
+  width: 50vw;
 }
 
-.appTitle {
-  font-size: 1.5em;
+.appNav {
+  border-left: white 1px solid;
+  color: white;
 }
 
-.appIntro {
-  font-size: large;
+.section {
+  min-height: 90vh;
+  display: flex;
+  padding: 10vh;
+  &:nth-child(2n+1) {
+    background-color: $secondary--dark;
+  }
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.sectionWrapper {
+  margin: auto;
+  width: 50vw;
+}
+
+.sectionContent {
+  border-left: white 1px solid;
+  color: white;
+  padding: 0 $indent;
+}
+
+.sectionHeader {
+  color: $primary;
+}
+
+.sectionFooter {
+  color: $primary;
+  font-size: $h2;
+}
+
+.experienceList {
+  padding: 0;
+}
+
+.experienceEntry {
+  padding: 0 $indent;
+  border-left: transparentize(white, 0.5) 1px solid;
+}
+
+.skillList {
+  border-left: transparentize(white, 0.5) 1px solid;
+}
+
+.skillSubset {
+  border-left: transparentize(white, 0.7) 1px solid;
+  font-size: 0.8em;
+}
+
+
+.h3 {
+  font-size: $h3;
+  color: $primary--light;
+}
+
+.decrease {
+  opacity: 0.7;
 }
