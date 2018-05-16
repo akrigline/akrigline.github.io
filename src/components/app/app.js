@@ -95,7 +95,7 @@ class App extends Component {
                     </li>
                     <li>GraphQL Integration (Apollo)</li>
                   </ul>
-                  <span className={styles.h3}>{'}'}</span>
+                  <span className={styles.h3}>{']'}</span>
                 </section>
                 <section>
                   <h3>secondary_skills: {'['}</h3>
@@ -108,7 +108,7 @@ class App extends Component {
                     <li>node.js</li>
                     <li>php</li>
                   </ul>
-                  <span className={styles.h3}>{'}'}</span>
+                  <span className={styles.h3}>{']'}</span>
                 </section>
               </div>
               <footer className={styles.sectionFooter}>
