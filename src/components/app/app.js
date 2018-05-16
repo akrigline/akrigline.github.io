@@ -102,6 +102,7 @@ class App extends Component {
                   <ul className={styles.skillList}>
                     <li>socket.io</li>
                     <li>Vue & Vuex</li>
+                    <li>React Native</li>
                     <li>jQuery</li>
                     <li>Wordpress Theming</li>
                     <li>node.js</li>
