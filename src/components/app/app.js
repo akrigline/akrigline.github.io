@@ -108,6 +108,7 @@ class App extends Component {
                       </ul>
                       {']'}
                     </li>
+                    <li>Jest & Enzyme</li>
                     <li>Javascript (ES6+)</li>
                     <li>Webpack</li>
                     <li>HTML</li>
