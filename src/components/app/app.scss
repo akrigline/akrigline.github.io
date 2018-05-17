@@ -21,6 +21,11 @@
 .appNav {
   border-left: white 1px solid;
   color: white;
+  svg {
+    height: 0.8em;
+    width: 0.8em;
+    fill: $primary;
+  }
 }
 
 .section {
@@ -52,7 +57,7 @@
   font-size: $h2;
 }
 
-.experienceList {
+.experienceList, .projectList {
   padding: 0;
 }
 

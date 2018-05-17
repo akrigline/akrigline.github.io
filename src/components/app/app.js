@@ -1,23 +1,49 @@
 import React, { Component } from 'react'
 import Logo from '../../assets/icons/logo.svg'
+import External from '../../assets/icons/baseline-launch-24px.svg'
 import styles from './app.scss'
 
 const Decrease = (props) => {
   return <span className={styles.decrease}>{props.children}</span>
 }
 
-const ExperienceEntry = props => {
+
+const ObjectEntry = props => {
   return (<li>
     <span className={styles.h3}>{'{'}</span>
     <div className={styles.experienceEntry}>
+      {props.children}
+    </div>
+    <span className={styles.h3}>{'}'}</span>
+  </li>)
+}
+
+const ExperienceEntry = props => {
+  return (
+    <ObjectEntry>
       <h3><Decrease>position:</Decrease> {props.name}</h3>
       <h4><Decrease>employer:</Decrease> {props.employer}</h4>
       <small><Decrease>time_start:</Decrease> {props.start}</small>
       <small><Decrease>time_end:</Decrease> {props.end}</small>
       <p><Decrease>description:</Decrease> {props.description}</p>
-    </div>
-    <span className={styles.h3}>{'}'}</span>
-  </li>)
+    </ObjectEntry>
+  )
+}
+
+const ProjectEntry = props => {
+  return (
+    <ObjectEntry>
+      <h3><Decrease>role:</Decrease> {props.techRole}</h3>
+      <h4><Decrease>primary_tech:</Decrease> {'['}</h4>
+        <ul className={styles.skillSubset}>
+          {props.tech.map((tech, index) => (
+            <li key={index}>{tech}</li>
+          ))}
+        </ul>
+      {']'}
+      <p><Decrease>description:</Decrease> {props.description}</p>
+    </ObjectEntry>
+  )
 }
 
 class App extends Component {
@@ -34,9 +60,10 @@ class App extends Component {
                   <li><a href='#self'>self</a></li>
                   <li><a href='#skills'>skills</a></li>
                   <li><a href='#experience'>experience</a></li>
+                  <li><a href='#projects'>projects</a></li>
                   <li><a href='#training'>training</a></li>
-                  <li><a href='https://github.com/akrigline'>github</a></li>
-                  <li><a href='https://www.linkedin.com/in/akrigline'>linkedin</a></li>
+                  <li><a target='blank' href='https://github.com/akrigline'>github <External /></a></li>
+                  <li><a target='blank' href='https://www.linkedin.com/in/akrigline'>linkedin <External /></a></li>
                 </ul>
                 <span className={styles.h1}>{'}'}</span>
               </nav>
@@ -160,6 +187,40 @@ class App extends Component {
               <footer className={styles.sectionFooter}>
                 ]
                 </footer>
+            </div>
+          </article>
+          <article className={styles.section} id="projects">
+            <div className={styles.sectionWrapper}>
+              <header className={styles.sectionHeader}>
+                <h2>projects: [</h2>
+              </header>
+              <div className={styles.sectionContent}>
+                <ul className={styles.projectList}>
+                  <ProjectEntry 
+                    techRole='Lead Front End Developer'
+                    tech={['react', 'redux', 'react-apollo', 'redux-form']}
+                    description="Guided front end team implementation of a graphql based dashboard system for tracking legal documents. Delegated tasks to junior talent while assessing and selecting libraries to help make the client's requirements come to fruition. Collaborated closely with creative team to ensure that proper UX patterns were being designed and implemented according to their suggestions. Worked with server team to ensure that front-end was supplied with and supplying correctly formatted mutations and queries to fulfill application needs."
+                    />
+                  <ProjectEntry 
+                    techRole='Full Stack Developer'
+                    tech={['react', 'redux', 'socket.io']}
+                    description='Created a small game application to test socket.io and redux with a database-less setup. Designed the UI and interactions based on similar games. Built and Deployed application, as well as tested and bug-fixed it myself.'
+                    />
+                  <ProjectEntry 
+                    techRole='Front End Developer'
+                    tech={['react', 'redux', 'redux-saga', 'i18next', 'redux-form']}
+                    description='Implemented a complex, multistage form for an education institution with options informed by previous steps, validated on the fly. Assessed and recommended localization library to suit our needs, and then implemented it across the webapp. Worked with creative team to ensure that edge cases were covered in a satisfactory way.'
+                    />
+                  <ProjectEntry 
+                    techRole='Front End Developer'
+                    tech={['react', 'redux', 'redux-thunk']}
+                    description='Built a react based cordova iOS & web app for POS use by a major retailer. Developed with an agile methodology with biweekly sprints being pushed to live use. Worked with creative team to implement designs in an efficient and performant way.'
+                    />
+                </ul>
+              </div>
+              <footer className={styles.sectionFooter}>
+                ]
+              </footer>
             </div>
           </article>
           <article className={styles.section} id="training">
