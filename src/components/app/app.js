@@ -95,6 +95,7 @@ class App extends Component {
                   <ul className={styles.skillList}>
                     <li>react: {'['}
                       <ul className={styles.skillSubset}>
+                        <li>hooks</li>
                         <li>react-router</li>
                         <li>recompose</li>
                       </ul>
@@ -108,6 +109,7 @@ class App extends Component {
                       </ul>
                       {']'}
                     </li>
+                    <li>Storybooks</li>
                     <li>Jest & Enzyme</li>
                     <li>Javascript (ES6+)</li>
                     <li>Webpack</li>
@@ -118,6 +120,7 @@ class App extends Component {
                         <li>LESS</li>
                         <li>CSSNext</li>
                         <li>StyledComponents</li>
+                        <li>JSS</li>
                       </ul>
                       {']'}
                     </li>
@@ -153,10 +156,16 @@ class App extends Component {
               <div className={styles.sectionContent}>
                 <ul className={styles.experienceList}>
                   <ExperienceEntry
+                    name="Front End Engineer"
+                    employer="Trumid Technologies"
+                    start="August 2018"
+                    end="Present"
+                    description="Bridge the gap between design and development team workflows to facilitate the creation of information dense, performant, and well designed webapps. On the development side I focused on implementing unique user experience flows in a strongly typed React and Redux front end stack. On the design side I helped create and flesh out the necessary details to move a user flow from concept to deployment. Aided in the creation and implementation of a company-wide design system to maintain a standardized look and feel, as well as maximize code reusability across multiple webapps. Helped define testing goals and implement strategies for automated regression testing." />
+                  <ExperienceEntry
                     name="Web Developer"
                     employer="Robots & Pencils"
                     start="March 2017"
-                    end="Present"
+                    end="July 2018"
                     description="Work closely with Pencil (Creative) and Server team members to create accessible and performant Web apps that exemplify modern UX patterns. Primarily focus on React and Redux front end stacks, with occasional HTML & jQuery work, as well as some React Native and Vue. Create estimates for prospective client work and aid sales team in their pitching of said work. Manage time and effort estimations of project epics and stories in order to keep team members on track to meet deadline goals. Assist junior talent in their acclimation to React and Redux, as well as explore new tech options for future work." />
                   <ExperienceEntry
                     name="Associate Experience Engineer"
@@ -197,6 +206,11 @@ class App extends Component {
               </header>
               <div className={styles.sectionContent}>
                 <ul className={styles.projectList}>
+                  <ProjectEntry 
+                    techRole='Front End Engineer'
+                    tech={['react', 'react hooks', 'redux', 'formik', 'redux-form', 'storybooks', 'typescript']}
+                    description="Simultaneously developed and maintained several interconnected webapps with information dense interfaces. Implemented a rock solid and simple to use UI regression testing methodology. Collaborated closely with designers to add features to an existing interface intended for a risk averse audience. Updated dependencies on a healthy cycle to continue leveraging the best and newest code patterns while upgrading old code to new tech."
+                    />
                   <ProjectEntry 
                     techRole='Lead Front End Developer'
                     tech={['react', 'redux', 'react-apollo', 'redux-form']}
